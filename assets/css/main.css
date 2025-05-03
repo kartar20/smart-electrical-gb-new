@@ -747,6 +747,58 @@ footer:before {
   border-radius: 50%;
 }
 
+/* Process steps styling */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.process-card {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 35px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.process-number {
+  width: 90px;
+  height: 90px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.2);
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+  }
+  
+  .process-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .process-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
   h1 {
@@ -907,4 +959,76 @@ footer:before {
   .contact-info {
     padding: 25px;
   }
+}
+
+/* Additional mobile-friendly styles */
+@media (max-width: 768px) {
+  /* Improve spacing for mobile */
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Make all flex containers stack on mobile */
+  .how-it-works .container > div,
+  .service-grid,
+  .testimonial-grid,
+  .about-content,
+  .contact-grid {
+    flex-direction: column;
+  }
+  
+  /* Adjust card widths for mobile */
+  .service-card,
+  .testimonial-card,
+  .how-it-works .container > div > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Improve button sizing on mobile */
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Improve section padding on mobile */
+  section {
+    padding: 60px 0 !important;
+  }
+  
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Fix for the "How We Work" section */
+.how-it-works .container > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.how-it-works .container > div > div {
+  flex: 1 1 300px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
